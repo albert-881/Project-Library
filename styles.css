@@ -1,0 +1,30 @@
+.card{
+    border: 1px solid black;
+    border-radius: 5px;
+    width:150px;
+    height:170px;
+    background-color: antiquewhite;
+   
+    padding:10px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.form-container {
+    margin-top: 70px;
+}
+
+.container {
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    
+}
+
+.container button {
+    width:80px;
+    height:40px;
+}
+
