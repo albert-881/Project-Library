@@ -16,26 +16,27 @@ function addBookToLibrary(book) {
 
 function displayBooks() {
     const container = document.querySelector('.container');
-    const btnCont = document.querySelector('.button-cont')
+    
     container.innerHTML = ''; // Clear the container before adding new elements
 
     for (let i = 0; i < myLibrary.length; i++) {
         const newDiv = document.createElement('div');
-        newDiv.textContent = `Title: ${myLibrary[i].title}, 
-                              Author: ${myLibrary[i].author}, 
-                              Pages: ${myLibrary[i].pages}, 
-                              Read: ${myLibrary[i].read}`;
+        newDiv.innerHTML = `Title: ${myLibrary[i].title} <br> 
+                    Author: ${myLibrary[i].author} <br> 
+                    Pages: ${myLibrary[i].pages} <br> 
+                    Read: ${myLibrary[i].read}`;
         newDiv.classList.add('card');
         container.append(newDiv);
 
         const btngroup = document.createElement('div');
-
+        
         const delBtn = document.createElement('button');
-        delBtn.textContent = 'delete';
+        delBtn.textContent = 'Delete';
         delBtn.addEventListener('click', (e) => {
             myLibrary.splice(i, 1); // Remove the book at index i
             displayBooks(); 
         })
+        
         btngroup.append(delBtn);
 
 
